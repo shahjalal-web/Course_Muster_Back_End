@@ -25,7 +25,7 @@ const purchaseMatchesUser = (p, userId) => {
 // normalize id to string
 const toStr = (v) => (v && v.toString ? v.toString() : String(v || ""));
 
-const getProgressForUser = async (req, res) => {
+const getProgressForStudent = async (req, res) => {
   try {
     const userId = req.user.id;
     if (!userId) return res.status(400).json({ error: "userId missing" });
@@ -532,4 +532,4 @@ const getProgressForadmin = async (req, res) => {
   }
 };
 
-module.exports = { getProgressForUser, getProgressForadmin };
+module.exports = { getProgressForStudent, getProgressForadmin };

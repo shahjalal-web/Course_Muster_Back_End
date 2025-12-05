@@ -2,7 +2,7 @@
 const express = require('express');
 const { createCourse, getAdminCourses, addLesson, getCourses, getCourseById, addBatchToCourse } = require('../controllers/admin.course.controller.js');
 const { requireAuth } = require('../middlewares/authMiddleware.js');
-const { getCoursesForStudent } = require('../controllers/course.controller.js');
+const { getCoursesForStudent } = require('../controllers/student.course.controller.js');
 
 const router = express.Router();
 

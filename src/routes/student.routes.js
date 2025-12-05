@@ -12,7 +12,7 @@ const {
   getLessons,
 } = require("../controllers/lessonController.js");
 const { requireAuth } = require("../middlewares/authMiddleware.js");
-const { getProgressForUser } = require("../controllers/progress.controller.js");
+const { getProgressForStudent } = require("../controllers/progress.controller.js");
 
 const router = express.Router();
 
@@ -36,7 +36,7 @@ router.post(
   submitAssignment
 );
 
-router.get("/progress",requireAuth(["student", "admin"]), getProgressForUser);
+router.get("/progress",requireAuth(["student", "admin"]), getProgressForStudent);
 
 router.get(
   "/user/:userId",

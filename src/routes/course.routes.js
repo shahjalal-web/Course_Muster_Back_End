@@ -3,7 +3,7 @@ const express = require("express");
 const {
   getCoursesForStudent,
   getCourseByIdForStudent,
-} = require("../controllers/course.controller.js");
+} = require("../controllers/student.course.controller.js");
 const { requireAuth } = require("../middlewares/authMiddleware.js");
 
 const router = express.Router();
